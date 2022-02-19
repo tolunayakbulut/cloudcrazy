@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url(/fonts/helvetica-bold.ttf) format(truetype);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(/fonts/helvetica.ttf) format(truetype);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(/fonts/helvetica-light.ttf) format(truetype);
+    font-weight: 200;
+}
+
+$primary: #3200FF;
+$white: #FFFFFF;
+$gray-100:#BAB5B5;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+    &:focus {
+        outline: 0;
+    }
+}
+
+.icon-login {
+    content: url(/img/login.svg);
+}
+
+.icon-favorites {
+    content: url(/img/favorites.svg);
+}
+
+.icon-cart {
+    content: url(/img/cart.svg);
+}
+
+.icon-search {
+    content: url(/img/search.svg);
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-top {
+        height: 85px;
+        display: flex;
+        align-items: center;
+        .logo {
+            width: 256px;
+        }
+        .search {
+            position: relative;
+            input {
+                width: 619px;
+                height: 32px;
+                padding: 0 50px 0 9px;
+                font-size: 16px;
+                &::placeholder {
+                    color: $gray-100;
+                }
+            }
+            i {
+                position: absolute;
+                color: $white;
+                top: 8px;
+                right: 16px;
+                height: 16px;
+            }
+        }
+        .top-menu {
+            ul {
+                li {
+                    a {
+                        color: $white;
+                        font-size: 14px;
+                        &:not(:last-child) {
+                            margin-right: 29px;
+                        }
+                        i {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        nav {
+            height: 48px;
+            display: flex;
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    a {
+                        font-size: 16px;
+                        color: $white;
+                        align-items: center;
+                    }
+                    padding: 8px 0;
+                    &:not(:last-child) {
+                        margin-right: 64px;
+                    }
+                }
+            }
+        }
+    }
+}

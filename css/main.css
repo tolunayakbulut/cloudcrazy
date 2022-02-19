@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url(/fonts/helvetica-bold.ttf) format(truetype);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url(/fonts/helvetica.ttf) format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url(/fonts/helvetica-light.ttf) format(truetype);
+  font-weight: 200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Helvetica';
+}
+
+*:focus {
+  outline: 0;
+}
+
+.icon-login {
+  content: url(/img/login.svg);
+}
+
+.icon-favorites {
+  content: url(/img/favorites.svg);
+}
+
+.icon-cart {
+  content: url(/img/cart.svg);
+}
+
+.icon-search {
+  content: url(/img/search.svg);
+}
+
+.container {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #3200FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .header-top {
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-top .logo {
+  width: 256px;
+}
+
+.header .header-top .search {
+  position: relative;
+}
+
+.header .header-top .search input {
+  width: 619px;
+  height: 32px;
+  padding: 0 50px 0 9px;
+  font-size: 16px;
+}
+
+.header .header-top .search input::-webkit-input-placeholder {
+  color: #BAB5B5;
+}
+
+.header .header-top .search input:-ms-input-placeholder {
+  color: #BAB5B5;
+}
+
+.header .header-top .search input::-ms-input-placeholder {
+  color: #BAB5B5;
+}
+
+.header .header-top .search input::placeholder {
+  color: #BAB5B5;
+}
+
+.header .header-top .search i {
+  position: absolute;
+  color: #FFFFFF;
+  top: 8px;
+  right: 16px;
+  height: 16px;
+}
+
+.header .header-top .top-menu ul li a {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.header .header-top .top-menu ul li a:not(:last-child) {
+  margin-right: 29px;
+}
+
+.header .header-top .top-menu ul li a i {
+  margin-right: 8px;
+}
+
+.header .header-bottom nav {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header-bottom nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-bottom nav ul li {
+  padding: 8px 0;
+}
+
+.header .header-bottom nav ul li a {
+  font-size: 16px;
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-bottom nav ul li:not(:last-child) {
+  margin-right: 64px;
+}
+/*# sourceMappingURL=main.css.map */
