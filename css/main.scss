@@ -19,6 +19,7 @@
 $primary: #3200FF;
 $white: #FFFFFF;
 $gray-100:#BAB5B5;
+$gray-200:#EEEEEE;
 $black:#000000;
 * {
     margin: 0;
@@ -130,6 +131,7 @@ $black:#000000;
 
 .content {
     margin-top: 32px;
+    min-height: 100vh;
     .container {
         .swiper-button-next,
         .swiper-button-prev {
@@ -204,16 +206,6 @@ $black:#000000;
                     }
                 }
             }
-            // .swiper-button-prev {
-            //     position: relative;
-            //     top: -175px;
-            //     margin-right: auto;
-            // }
-            // .swiper-button-next {
-            //     position: relative;
-            //     top: -155px;
-            //     margin-left: auto;
-            // }
         }
         .banner {
             img {
@@ -230,6 +222,7 @@ $black:#000000;
     flex-direction: column;
     background-color: $black;
     padding: 40px 0px;
+    margin-top: auto;
     img {
         display: block;
         margin-bottom: 16px;
@@ -238,5 +231,134 @@ $black:#000000;
     span {
         font-size: 16px;
         color: $white;
+    }
+}
+
+.breadcrumb {
+    ul {
+        display: flex;
+        li {
+            line-height: 14px;
+            &+li::before {
+                padding: 8px;
+                color: $black;
+                content: "/\00a0";
+            }
+            a {
+                color: $black;
+                font-size: 14px;
+            }
+            .active {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.product-list {
+    display: flex;
+    margin-bottom: 32px;
+    .sidebar {
+        margin-top: 23px;
+        margin-right: 32px;
+        min-width: 386px;
+        a {
+            color: $primary;
+            font-size: 16px;
+        }
+        .filter-list {
+            background-color: $gray-200;
+            padding: 24px 0 0 24px;
+            margin-top: 22px;
+            height: 100vh;
+            h4 {
+                font-size: 16px;
+                font-weight: 700;
+                &:not(:first-child) {
+                    margin-top: 16px;
+                }
+            }
+            ul {
+                margin-top: 17px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin-top: 12px;
+                    span {
+                        font-size: 14px;
+                        margin-left: 8px;
+                    }
+                    input[type=checkbox]::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        top: 0;
+                        left: 0;
+                        border: none;
+                        border-radius: 3px;
+                        background-color: $white;
+                    }
+                    input[type=checkbox]:checked:after {
+                        content: "";
+                        display: block;
+                        width: 5px;
+                        height: 10px;
+                        border: solid $primary;
+                        border-width: 0 1.33px 1.33px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 1.33px;
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .product-list-content {
+        margin-top: 23px;
+        .product-list-content-items {
+            display: flex;
+            flex-wrap: wrap;
+            .products-list-item {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                background: $white;
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+                margin-top: 22px;
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+                .image-box {
+                    padding: 0 50px;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text-box {
+                    width: 100%;
+                    padding: 20px 0 30px 16px;
+                    h6 {
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-bottom: 16px;
+                    }
+                    span {
+                        font-size: 16px;
+                    }
+                    a {
+                        color: $black;
+                    }
+                }
+            }
+        }
     }
 }
