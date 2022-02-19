@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Homepage</title>
 </head>
 
@@ -50,6 +51,51 @@
             </div>
         </div>
     </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="banners">
+                <div class="banners-left">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href=""><img src="/img/slide-1.png" alt="Slide 1"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="/img/slide-1.png" alt="Slide 2"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="/img/slide-1.png" alt="Slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="banners-right">
+                    <a href="#">
+                        <div class="banner">
+                            <img src="/img/slide-2.png" alt="Slide 2">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="banner">
+                            <img src="/img/slide-2.png" alt="Slide 2">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer></footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

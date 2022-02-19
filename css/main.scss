@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', sans-serif;
     src: url(/fonts/helvetica-bold.ttf) format(truetype);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', sans-serif;
     src: url(/fonts/helvetica.ttf) format(truetype);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', sans-serif;
     src: url(/fonts/helvetica-light.ttf) format(truetype);
     font-weight: 200;
 }
@@ -121,6 +121,43 @@ $gray-100:#BAB5B5;
                     &:not(:last-child) {
                         margin-right: 64px;
                     }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    margin-top: 32px;
+    .container {
+        .banners {
+            display: flex;
+            flex-direction: row;
+            .banners-left {
+                display: flex;
+                width: 940px;
+                height: 236px;
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: $primary;
+                }
+                .swiper-button-next:after,
+                .swiper-rtl .swiper-button-prev:after {
+                    content: url(/img/next.svg);
+                }
+                .swiper-button-prev:after,
+                .swiper-rtl .swiper-button-next:after {
+                    content: url(/img/prev.svg);
+                }
+            }
+            .banners-right {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-left: 16px;
+                .banner {
+                    height: 110px;
+                    width: 100%;
                 }
             }
         }
