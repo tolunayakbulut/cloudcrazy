@@ -172,6 +172,21 @@
   margin-top: 32px;
 }
 
+.content .container .swiper-button-next,
+.content .container .swiper-button-prev {
+  color: #3200FF;
+}
+
+.content .container .swiper-button-next:after,
+.content .container .swiper-rtl .swiper-button-prev:after {
+  content: url(/img/next.svg);
+}
+
+.content .container .swiper-button-prev:after,
+.content .container .swiper-rtl .swiper-button-next:after {
+  content: url(/img/prev.svg);
+}
+
 .content .container .banners {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,21 +205,6 @@
   height: 236px;
 }
 
-.content .container .banners .banners-left .swiper-button-next,
-.content .container .banners .banners-left .swiper-button-prev {
-  color: #3200FF;
-}
-
-.content .container .banners .banners-left .swiper-button-next:after,
-.content .container .banners .banners-left .swiper-rtl .swiper-button-prev:after {
-  content: url(/img/next.svg);
-}
-
-.content .container .banners .banners-left .swiper-button-prev:after,
-.content .container .banners .banners-left .swiper-rtl .swiper-button-next:after {
-  content: url(/img/prev.svg);
-}
-
 .content .container .banners .banners-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,5 +220,97 @@
 .content .container .banners .banners-right .banner {
   height: 110px;
   width: 100%;
+}
+
+.content .container .products {
+  margin: 32px 0 22px 0;
+}
+
+.content .container .products h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content .container .products .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 36px;
+  padding: 10px 12px;
+}
+
+.content .container .products .swiper .swiper-slide {
+  font-size: 18px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .container .products .swiper .swiper-slide .image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .container .products .swiper .swiper-slide .text-box {
+  width: 100%;
+  padding: 20px 0 30px 16px;
+}
+
+.content .container .products .swiper .swiper-slide .text-box h6 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content .container .products .swiper .swiper-slide .text-box span {
+  font-size: 16px;
+}
+
+.content .container .products .swiper .swiper-slide .text-box a {
+  color: #000000;
+}
+
+.content .container .banner img {
+  display: block;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000000;
+  padding: 40px 0px;
+}
+
+.footer img {
+  display: block;
+  margin-bottom: 16px;
+  width: 256px;
+}
+
+.footer span {
+  font-size: 16px;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
