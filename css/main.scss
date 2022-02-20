@@ -378,6 +378,10 @@ $gray-300:#707070;
             &:nth-of-type(even) {
                 margin-right: 32px;
             }
+            &:first-child {
+                width: 870px;
+                height: 580px;
+            }
         }
     }
     .text-detail {
@@ -479,6 +483,7 @@ $gray-300:#707070;
             margin-top: 32px;
             padding: 8px 0px;
             border: none;
+            text-align: center;
         }
     }
 }

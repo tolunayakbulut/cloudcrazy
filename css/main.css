@@ -510,6 +510,11 @@
   margin-right: 32px;
 }
 
+.product-detail .image-detail img:first-child {
+  width: 870px;
+  height: 580px;
+}
+
 .product-detail .text-detail {
   margin: 32px 0 0 48px;
   position: -webkit-sticky;
@@ -624,5 +629,6 @@
   margin-top: 32px;
   padding: 8px 0px;
   border: none;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

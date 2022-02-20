@@ -1,4 +1,4 @@
-// Initialize Swiper
+// SwiperJS for slider
 var swiper = new Swiper(".banners", {
     navigation: {
         nextEl: ".swiper-button-next",
@@ -33,3 +33,24 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+
+// Change Color
+let img = document.querySelector('#imgClickAndChange');
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
+let btn3 = document.querySelector('#btn3');
+let btn4 = document.querySelector('#btn4');
+
+btn1.addEventListener('click', () => {
+    img.src = '/img/product-detail-1.png';
+})
+btn2.addEventListener('click', () => {
+    img.src = '/img/product-detail-2.png';
+})
+btn3.addEventListener('click', () => {
+    img.src = '/img/product-detail-3.png';
+})
+btn4.addEventListener('click', () => {
+    img.src = '/img/product-detail-2.png';
+})
