@@ -483,4 +483,127 @@
 .product-list .product-list-content .product-list-content-items .products-list-item .text-box a {
   color: #000000;
 }
+
+.product-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-detail .image-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 870px;
+}
+
+.product-detail .image-detail img {
+  margin-top: 32px;
+}
+
+.product-detail .image-detail img:nth-of-type(even) {
+  margin-right: 32px;
+}
+
+.product-detail .text-detail {
+  margin: 32px 0 0 48px;
+}
+
+.product-detail .text-detail h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.product-detail .text-detail h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.product-detail .text-detail span {
+  color: #BAB5B5;
+  font-size: 14px;
+}
+
+.product-detail .text-detail ul {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-detail .text-detail ul li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.product-detail .text-detail ul li:first-child a {
+  background: #707070;
+}
+
+.product-detail .text-detail ul li:nth-child(2) a {
+  background: #BAB5B5;
+}
+
+.product-detail .text-detail ul li:nth-child(3) a {
+  background: #EEEEEE;
+}
+
+.product-detail .text-detail ul li:nth-child(4) a {
+  background: #000000;
+}
+
+.product-detail .text-detail ul li .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.product-detail .text-detail .acordion-menu {
+  margin-top: 24px;
+  width: 400px;
+}
+
+.product-detail .text-detail .acordion-menu .accordion {
+  color: #000000;
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.product-detail .text-detail .acordion-menu .accordion::after {
+  content: url(/img/accordion-2.svg);
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.product-detail .text-detail .acordion-menu .active:after {
+  content: url(/img/accordion-1.svg);
+}
+
+.product-detail .text-detail .acordion-menu .panel {
+  padding: 0 18px;
+  color: #707070;
+  background-color: #EEEEEE;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.product-detail .text-detail .acordion-menu .panel:not(:last-child) {
+  margin-bottom: 24px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -18,9 +18,10 @@
 
 $primary: #3200FF;
 $white: #FFFFFF;
+$black:#000000;
 $gray-100:#BAB5B5;
 $gray-200:#EEEEEE;
-$black:#000000;
+$gray-300:#707070;
 * {
     margin: 0;
     padding: 0;
@@ -357,6 +358,108 @@ $black:#000000;
                     a {
                         color: $black;
                     }
+                }
+            }
+        }
+    }
+}
+
+.product-detail {
+    display: flex;
+    .image-detail {
+        display: flex;
+        flex-wrap: wrap;
+        width: 870px;
+        img {
+            margin-top: 32px;
+            &:nth-of-type(even) {
+                margin-right: 32px;
+            }
+        }
+    }
+    .text-detail {
+        margin: 32px 0 0 48px;
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        span {
+            color: $gray-100;
+            font-size: 14px;
+        }
+        ul {
+            margin-top: 24px;
+            display: flex;
+            li {
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+                &:first-child {
+                    a {
+                        background: $gray-300;
+                    }
+                }
+                &:nth-child(2) {
+                    a {
+                        background: $gray-100;
+                    }
+                }
+                &:nth-child(3) {
+                    a {
+                        background: $gray-200;
+                    }
+                }
+                &:nth-child(4) {
+                    a {
+                        background: $black;
+                    }
+                }
+                .dots {
+                    display: flex;
+                    border-radius: 16px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .acordion-menu {
+            margin-top: 24px;
+            width: 400px;
+            .accordion {
+                color: $black;
+                cursor: pointer;
+                padding: 16px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 18px;
+                transition: 0.4s;
+                &::after {
+                    content: url(/img/accordion-2.svg);
+                    color: #777;
+                    font-weight: bold;
+                    float: right;
+                    margin-left: 5px;
+                }
+            }
+            .active:after {
+                content: url(/img/accordion-1.svg);
+            }
+            .panel {
+                padding: 0 18px;
+                color: $gray-300;
+                background-color: $gray-200;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                &:not(:last-child) {
+                    margin-bottom: 24px;
                 }
             }
         }
