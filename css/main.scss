@@ -134,25 +134,40 @@ $gray-300:#707070;
     margin-top: 32px;
     min-height: 100vh;
     .container {
-        .swiper-button-next,
-        .swiper-button-prev {
+        .slick-prev:before,
+        .slick-next:before {
             color: $primary;
         }
-        .swiper-button-next:after,
-        .swiper-rtl .swiper-button-prev:after {
+        .slick-next:before {
             content: url(/img/next.svg);
+            top: -10px;
+            position: relative;
         }
-        .swiper-button-prev:after,
-        .swiper-rtl .swiper-button-next:after {
+        .slick-prev:before {
             content: url(/img/prev.svg);
+            top: -10px;
+            position: relative;
         }
         .banners {
             display: flex;
             flex-direction: row;
             .banners-left {
                 display: flex;
-                width: 940px;
-                height: 236px;
+                .slick-slider-banner {
+                    img {
+                        margin: 0 10px;
+                    }
+                    .slick-next {
+                        right: 25px;
+                    }
+                    .slick-prev {
+                        left: 25px;
+                        z-index: 1;
+                    }
+                    .slick-list {
+                        width: 940px;
+                    }
+                }
             }
             .banners-right {
                 display: flex;
@@ -160,7 +175,7 @@ $gray-300:#707070;
                 gap: 16px;
                 margin-left: 16px;
                 .banner {
-                    height: 110px;
+                    height: 105px;
                     width: 100%;
                 }
             }
@@ -171,13 +186,17 @@ $gray-300:#707070;
                 font-size: 24px;
                 font-weight: 700;
             }
-            .swiper {
-                width: 100%;
-                height: 100%;
-                margin-top: 36px;
-                padding: 10px 12px;
-                .swiper-slide {
+            .slick-slider {
+                padding: 10px 30px;
+                .slick-prev {
+                    left: 0px;
+                }
+                .slick-next {
+                    right: 0px;
+                }
+                .slick-slider-item {
                     font-size: 18px;
+                    margin: 10px 8px;
                     background: $white;
                     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
                     display: flex;

@@ -173,19 +173,21 @@
   min-height: 100vh;
 }
 
-.content .container .swiper-button-next,
-.content .container .swiper-button-prev {
+.content .container .slick-prev:before,
+.content .container .slick-next:before {
   color: #3200FF;
 }
 
-.content .container .swiper-button-next:after,
-.content .container .swiper-rtl .swiper-button-prev:after {
+.content .container .slick-next:before {
   content: url(/img/next.svg);
+  top: -10px;
+  position: relative;
 }
 
-.content .container .swiper-button-prev:after,
-.content .container .swiper-rtl .swiper-button-next:after {
+.content .container .slick-prev:before {
   content: url(/img/prev.svg);
+  top: -10px;
+  position: relative;
 }
 
 .content .container .banners {
@@ -202,8 +204,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.content .container .banners .banners-left .slick-slider-banner img {
+  margin: 0 10px;
+}
+
+.content .container .banners .banners-left .slick-slider-banner .slick-next {
+  right: 25px;
+}
+
+.content .container .banners .banners-left .slick-slider-banner .slick-prev {
+  left: 25px;
+  z-index: 1;
+}
+
+.content .container .banners .banners-left .slick-slider-banner .slick-list {
   width: 940px;
-  height: 236px;
 }
 
 .content .container .banners .banners-right {
@@ -219,7 +236,7 @@
 }
 
 .content .container .banners .banners-right .banner {
-  height: 110px;
+  height: 105px;
   width: 100%;
 }
 
@@ -232,15 +249,21 @@
   font-weight: 700;
 }
 
-.content .container .products .swiper {
-  width: 100%;
-  height: 100%;
-  margin-top: 36px;
-  padding: 10px 12px;
+.content .container .products .slick-slider {
+  padding: 10px 30px;
 }
 
-.content .container .products .swiper .swiper-slide {
+.content .container .products .slick-slider .slick-prev {
+  left: 0px;
+}
+
+.content .container .products .slick-slider .slick-next {
+  right: 0px;
+}
+
+.content .container .products .slick-slider .slick-slider-item {
   font-size: 18px;
+  margin: 10px 8px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
@@ -256,7 +279,7 @@
           flex-direction: column;
 }
 
-.content .container .products .swiper .swiper-slide .image-box img {
+.content .container .products .slick-slider .slick-slider-item .image-box img {
   display: block;
   width: 100%;
   height: 100%;
@@ -264,21 +287,21 @@
      object-fit: cover;
 }
 
-.content .container .products .swiper .swiper-slide .text-box {
+.content .container .products .slick-slider .slick-slider-item .text-box {
   width: 100%;
   padding: 20px 0 30px 16px;
 }
 
-.content .container .products .swiper .swiper-slide .text-box h6 {
+.content .container .products .slick-slider .slick-slider-item .text-box h6 {
   font-size: 16px;
   font-weight: 700;
 }
 
-.content .container .products .swiper .swiper-slide .text-box span {
+.content .container .products .slick-slider .slick-slider-item .text-box span {
   font-size: 16px;
 }
 
-.content .container .products .swiper .swiper-slide .text-box a {
+.content .container .products .slick-slider .slick-slider-item .text-box a {
   color: #000000;
 }
 

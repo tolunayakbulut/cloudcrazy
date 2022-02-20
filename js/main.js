@@ -1,21 +1,21 @@
-// SwiperJS for slider
-var swiper = new Swiper(".banners", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    spaceBetween: 30
-});
-var swiper = new Swiper(".featured", {
-    slidesPerView: 4,
-    spaceBetween: 16,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    }
-});
+// Slick Slider
+$(document).ready(function() {
+    $('.slick-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true
+    });
 
+
+    $('.slick-slider-banner').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true
+    });
+
+});
 
 // Accordion Menu
 var acc = document.getElementsByClassName("accordion");
@@ -36,6 +36,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 // Change Color
+// I prefer use "addEventListener". The method may change according to backend preference.
 let img = document.querySelector('#imgClickAndChange');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
