@@ -26,8 +26,10 @@
                     </a>
                 </div>
                 <div class="search">
-                    <input type="text" placeholder="Search for brands, categories or products">
-                    <i class="icon-search"></i>
+                    <form action="" onsubmit="return false">
+                        <input type="text" id="search" placeholder="Search for brands, categories or products">
+                        <i class="icon-search"></i>
+                    </form>
                 </div>
                 <div class="top-menu">
                     <ul>
@@ -74,18 +76,21 @@
                         <h4>Brand</h4>
                         <ul>
                             <li>
-                                <input type="checkbox" id="filter" onclick="myFunction()">
+                                <input type="checkbox" value="BrandA" id="BrandA" class="checkbox">
                                 <span>Brand A</span>
                             </li>
                             <li>
-                                <input type="checkbox" id="filter">
-                                <span>Brand A</span>
+                                <input type="checkbox" value="BrandB" id="BrandB" class="checkbox">
+                                <span>Brand B</span>
                             </li>
                             <li>
-                                <input type="checkbox" id="filter">
-                                <span>Brand A</span>
+                                <input type="checkbox" value="BrandC" id="BrandC" class="checkbox">
+                                <span>Brand C</span>
                             </li>
                         </ul>
+                        <div class="print-values">
+                            <p id="valueList"></p>
+                        </div>
                         <h4>Color</h4>
                         <ul>
                             <li>
@@ -115,25 +120,10 @@
                             </a>
                             <div class="text-box">
                                 <a href="#">
-                                    <h6>Brand</h6>
+                                    <h6>Brand A</h6>
                                 </a>
                                 <a href="#">
-                                    <span>Product Name</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="products-list-item">
-                            <a href="#">
-                                <div class="image-box">
-                                    <img src="/img/product.png" alt="Product">
-                                </div>
-                            </a>
-                            <div class="text-box">
-                                <a href="#">
-                                    <h6>Brand</h6>
-                                </a>
-                                <a href="#">
-                                    <span>Product Name</span>
+                                    <span>Product Name A</span>
                                 </a>
                             </div>
                         </div>
@@ -145,25 +135,10 @@
                             </a>
                             <div class="text-box">
                                 <a href="#">
-                                    <h6>Brand</h6>
+                                    <h6>Brand A</h6>
                                 </a>
                                 <a href="#">
-                                    <span>Product Name</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="products-list-item">
-                            <a href="#">
-                                <div class="image-box">
-                                    <img src="/img/product.png" alt="Product">
-                                </div>
-                            </a>
-                            <div class="text-box">
-                                <a href="#">
-                                    <h6>Brand</h6>
-                                </a>
-                                <a href="#">
-                                    <span>Product Name</span>
+                                    <span>Product Name A</span>
                                 </a>
                             </div>
                         </div>
@@ -175,10 +150,10 @@
                             </a>
                             <div class="text-box">
                                 <a href="#">
-                                    <h6>Brand</h6>
+                                    <h6>Brand B</h6>
                                 </a>
                                 <a href="#">
-                                    <span>Product Name</span>
+                                    <span>Product Name B</span>
                                 </a>
                             </div>
                         </div>
@@ -190,10 +165,40 @@
                             </a>
                             <div class="text-box">
                                 <a href="#">
-                                    <h6>Brand</h6>
+                                    <h6>Brand C</h6>
                                 </a>
                                 <a href="#">
-                                    <span>Product Name</span>
+                                    <span>Product Name C</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="products-list-item">
+                            <a href="#">
+                                <div class="image-box">
+                                    <img src="/img/product.png" alt="Product">
+                                </div>
+                            </a>
+                            <div class="text-box">
+                                <a href="#">
+                                    <h6>Brand D</h6>
+                                </a>
+                                <a href="#">
+                                    <span>Product Name D</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="products-list-item">
+                            <a href="#">
+                                <div class="image-box">
+                                    <img src="/img/product.png" alt="Product">
+                                </div>
+                            </a>
+                            <div class="text-box">
+                                <a href="#">
+                                    <h6>Brand D</h6>
+                                </a>
+                                <a href="#">
+                                    <span>Product Name D</span>
                                 </a>
                             </div>
                         </div>

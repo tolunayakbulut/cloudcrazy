@@ -35,6 +35,37 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+// Searching
+const search = document.getElementById("search");
+const productName = document.querySelectorAll(".products-list-item .text-box span");
+const brandName = document.querySelectorAll(".products-list-item .text-box h6");
+
+search.addEventListener("keyup", filterProducts);
+
+
+function filterProducts(e) {
+    const text = e.target.value.toLowerCase();
+    // console.log(productName[0]);
+    productName.forEach(function(product) {
+        const item = product.firstChild.textContent;
+        if (item.toLowerCase().indexOf(text) != -1) {
+            product.parentElement.parentElement.parentElement.style.display = "block"
+        } else {
+            product.parentElement.parentElement.parentElement.style.display = "none"
+        }
+    })
+    brandName.forEach(function(product) {
+        const item = product.firstChild.textContent;
+        if (item.toLowerCase().indexOf(text) != -1) {
+            product.parentElement.parentElement.parentElement.style.display = "block"
+        } else {
+            product.parentElement.parentElement.parentElement.style.display = "none"
+        }
+    })
+}
+
+
+
 // Change Color
 // I prefer use "addEventListener". The method may change according to backend preference.
 let img = document.querySelector('#imgClickAndChange');

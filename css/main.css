@@ -654,4 +654,21 @@
   border: none;
   text-align: center;
 }
+
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  -webkit-animation: hide .5s ease 0s 1 normal forwards;
+          animation: hide .5s ease 0s 1 normal forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  display: none !important;
+}
+
+.show {
+  /* You can play with the seconds to change the "animation" */
+  -webkit-animation: show .5s ease 0s 1 normal forwards;
+          animation: show .5s ease 0s 1 normal forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
 /*# sourceMappingURL=main.css.map */
