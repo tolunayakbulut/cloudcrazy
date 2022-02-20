@@ -488,6 +488,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid #BAB5B5;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .product-detail .image-detail {
@@ -509,6 +512,11 @@
 
 .product-detail .text-detail {
   margin: 32px 0 0 48px;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 450px;
+  top: 20px;
+  bottom: auto;
 }
 
 .product-detail .text-detail h2 {
@@ -563,12 +571,12 @@
   height: 24px;
 }
 
-.product-detail .text-detail .acordion-menu {
+.product-detail .text-detail .accordion-menu {
   margin-top: 24px;
   width: 400px;
 }
 
-.product-detail .text-detail .acordion-menu .accordion {
+.product-detail .text-detail .accordion-menu .accordion {
   color: #000000;
   cursor: pointer;
   padding: 16px;
@@ -581,7 +589,7 @@
   transition: 0.4s;
 }
 
-.product-detail .text-detail .acordion-menu .accordion::after {
+.product-detail .text-detail .accordion-menu .accordion::after {
   content: url(/img/accordion-2.svg);
   color: #777;
   font-weight: bold;
@@ -589,11 +597,11 @@
   margin-left: 5px;
 }
 
-.product-detail .text-detail .acordion-menu .active:after {
+.product-detail .text-detail .accordion-menu .active:after {
   content: url(/img/accordion-1.svg);
 }
 
-.product-detail .text-detail .acordion-menu .panel {
+.product-detail .text-detail .accordion-menu .panel {
   padding: 0 18px;
   color: #707070;
   background-color: #EEEEEE;
@@ -603,7 +611,18 @@
   transition: max-height 0.2s ease-out;
 }
 
-.product-detail .text-detail .acordion-menu .panel:not(:last-child) {
+.product-detail .text-detail .accordion-menu .panel:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.product-detail .text-detail .primary-button {
+  display: block;
+  width: 100%;
+  background-color: #3200FF;
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-top: 32px;
+  padding: 8px 0px;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
