@@ -465,6 +465,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   width: 300px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
@@ -474,6 +475,17 @@
 
 .product-list .product-list-content .product-list-content-items .products-list-item:not(:last-child) {
   margin-right: 16px;
+}
+
+.product-list .product-list-content .product-list-content-items .products-list-item .top-seller {
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 6px 15px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
 }
 
 .product-list .product-list-content .product-list-content-items .products-list-item .image-box {
