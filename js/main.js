@@ -35,6 +35,31 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+
+// Change Color
+// I prefer use "addEventListener". The method may change according to backend preference.
+let img = document.querySelector('#imgClickAndChange');
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
+let btn3 = document.querySelector('#btn3');
+let btn4 = document.querySelector('#btn4');
+
+if (img) {
+    btn1.addEventListener('click', () => {
+        img.src = '/img/product-detail-1.png';
+    })
+    btn2.addEventListener('click', () => {
+        img.src = '/img/product-detail-2.png';
+    })
+    btn3.addEventListener('click', () => {
+        img.src = '/img/product-detail-3.png';
+    })
+    btn4.addEventListener('click', () => {
+        img.src = '/img/product-detail-2.png';
+    })
+}
+
+
 // Searching
 const search = document.getElementById("search");
 const productName = document.querySelectorAll(".products-list-item .text-box span");
@@ -45,7 +70,6 @@ search.addEventListener("keyup", filterProducts);
 
 function filterProducts(e) {
     const text = e.target.value.toLowerCase();
-    // console.log(productName[0]);
     productName.forEach(function(product) {
         const item = product.firstChild.textContent;
         if (item.toLowerCase().indexOf(text) != -1) {
@@ -65,24 +89,49 @@ function filterProducts(e) {
 }
 
 
+// Product Counter
+const divs = document.querySelectorAll('.product-list-content-items .products-list-item');
+document.getElementById("productCount").innerHTML = "Showing " + divs.length + " Products";
 
-// Change Color
-// I prefer use "addEventListener". The method may change according to backend preference.
-let img = document.querySelector('#imgClickAndChange');
-let btn1 = document.querySelector('#btn1');
-let btn2 = document.querySelector('#btn2');
-let btn3 = document.querySelector('#btn3');
-let btn4 = document.querySelector('#btn4');
 
-btn1.addEventListener('click', () => {
-    img.src = '/img/product-detail-1.png';
-})
-btn2.addEventListener('click', () => {
-    img.src = '/img/product-detail-2.png';
-})
-btn3.addEventListener('click', () => {
-    img.src = '/img/product-detail-3.png';
-})
-btn4.addEventListener('click', () => {
-    img.src = '/img/product-detail-2.png';
-})
+
+
+// Filter Product
+// let checkbox = document.querySelector('#checkbox')
+// let product = document.querySelectorAll('.products-list-item');
+// //console.log(product)
+// //console.log(checkbox)
+
+// for (i = 0; i < product.length; i++) {
+//     checkbox.addEventListener('change', function(e) {
+//         if (checkbox.checked) {
+//             console.log("test")
+//             product.style.display = "none";
+//         } else {
+//             product.style.display = "initial";
+//         }
+//     });
+// }
+
+// const checkboxes = document.querySelectorAll('.checkbox');
+// const storeProduct = document.querySelectorAll('#brandA');
+// const storeProductsAll = document.querySelectorAll('.products-list-item');
+
+// for (i = 0; i < checkboxes.length; i++) {
+
+//     checkboxes[i].addEventListener('change', (e) => {
+//         e.preventDefault()
+
+//         storeProduct.forEach((product) => {
+//             if (checkbox.checked) {
+//                 storeProductsAll.forEach((productAll) => {
+//                     productAll.style.display = "none";
+//                 });
+//                 product.style.display = "initial";
+
+//             } else {
+//                 product.style.display = "none";
+//             }
+//         });
+//     });
+// };
