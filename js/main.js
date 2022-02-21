@@ -61,9 +61,10 @@ if (img) {
 
 
 // Searching
+// It is work only for product name
 const search = document.getElementById("search");
 const productName = document.querySelectorAll(".products-list-item .text-box span");
-const brandName = document.querySelectorAll(".products-list-item .text-box h6");
+//console.log(productName)
 if (search) {
     search.addEventListener("keyup", filterProducts);
 }
@@ -74,15 +75,7 @@ function filterProducts(e) {
     productName.forEach(function(product) {
         const item = product.firstChild.textContent;
         if (item.toLowerCase().indexOf(text) != -1) {
-            product.parentElement.parentElement.parentElement.style.display = "block"
-        } else {
-            product.parentElement.parentElement.parentElement.style.display = "none"
-        }
-    })
-    brandName.forEach(function(product) {
-        const item = product.firstChild.textContent;
-        if (item.toLowerCase().indexOf(text) != -1) {
-            product.parentElement.parentElement.parentElement.style.display = "block"
+            product.parentElement.parentElement.parentElement.style.display = "flex"
         } else {
             product.parentElement.parentElement.parentElement.style.display = "none"
         }
@@ -92,8 +85,10 @@ function filterProducts(e) {
 
 // Product Counter
 const divs = document.querySelectorAll('.product-list-content-items .products-list-item');
-if (divs.length) {
-    document.getElementById("productCount").innerHTML = "Showing " + divs.length + " Products";
+let isNone = document.querySelectorAll("#brand");
+
+if (isNone.length == divs.length) {
+    document.getElementById("productCount").innerHTML = "Showing " + isNone.length + " Products";
 }
 
 
