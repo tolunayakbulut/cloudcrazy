@@ -64,8 +64,9 @@ if (img) {
 const search = document.getElementById("search");
 const productName = document.querySelectorAll(".products-list-item .text-box span");
 const brandName = document.querySelectorAll(".products-list-item .text-box h6");
-
-search.addEventListener("keyup", filterProducts);
+if (search) {
+    search.addEventListener("keyup", filterProducts);
+}
 
 
 function filterProducts(e) {
@@ -91,7 +92,9 @@ function filterProducts(e) {
 
 // Product Counter
 const divs = document.querySelectorAll('.product-list-content-items .products-list-item');
-document.getElementById("productCount").innerHTML = "Showing " + divs.length + " Products";
+if (divs.length) {
+    document.getElementById("productCount").innerHTML = "Showing " + divs.length + " Products";
+}
 
 
 

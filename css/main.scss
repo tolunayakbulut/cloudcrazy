@@ -517,16 +517,3 @@ $gray-300:#707070;
         }
     }
 }
-
-.hide {
-    /* You can play with the seconds to change the "animation" */
-    animation: hide .5s ease 0s 1 normal forwards;
-    transform-origin: center;
-    display: none!important;
-}
-
-.show {
-    /* You can play with the seconds to change the "animation" */
-    animation: show .5s ease 0s 1 normal forwards;
-    transform-origin: center;
-}
